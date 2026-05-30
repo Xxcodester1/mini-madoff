@@ -3,5 +3,6 @@ alpaca-py>=0.20.0
 python-dotenv>=1.0.0
 pandas>=2.0.0
 flask>=3.0.0
+gunicorn>=21.0.0
 textual>=8.0.0
 pyfiglet>=0.8.0
