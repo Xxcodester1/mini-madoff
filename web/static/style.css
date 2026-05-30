@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg:          #050a05;
-  --surface:     #080e08;
-  --card:        #091209;
-  --card-hover:  #0e1c0e;
-  --border:      #143314;
-  --border-gold: #1a5c1a;
-  --gold:        #00C853;
-  --gold-bright: #69F0AE;
-  --gold-glow:   rgba(0,200,83,0.25);
-  --green:       #00e676;
-  --green-dim:   rgba(0,230,118,0.15);
+  --bg:          #080808;
+  --surface:     #0e0e0e;
+  --card:        #100e00;
+  --card-hover:  #181500;
+  --border:      #2a2200;
+  --border-gold: #664400;
+  --gold:        #FFB300;
+  --gold-bright: #FFD700;
+  --gold-glow:   rgba(255,179,0,0.25);
+  --green:       #00d46a;
+  --green-dim:   rgba(0,212,106,0.15);
   --red:         #ff4455;
   --red-dim:     rgba(255,68,85,0.15);
   --text:        #e8e8e8;
-  --dim:         #4a664a;
+  --dim:         #555555;
   --font-display: 'Orbitron', monospace;
   --font-mono:    'Space Mono', monospace;
   --font-body:    'Inter', sans-serif;
@@ -33,7 +33,7 @@ body {
 
 /* ── HEADER ─────────────────────────────────────────── */
 header {
-  background: linear-gradient(160deg, #020d02 0%, #091a09 40%, #020d02 100%);
+  background: linear-gradient(160deg, #0f0a00 0%, #1c1400 40%, #0f0a00 100%);
   border-bottom: 2px solid var(--gold);
   padding: 2.5rem 2rem 2rem;
   text-align: center;
@@ -45,11 +45,11 @@ header {
   font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 900;
   letter-spacing: 0.15em;
-  background: linear-gradient(135deg, #69F0AE 0%, #00C853 40%, #007a32 100%);
+  background: linear-gradient(135deg, #ffe066 0%, #FFB300 40%, #ff8c00 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 24px rgba(0,200,83,0.5));
+  filter: drop-shadow(0 0 24px rgba(255,179,0,0.45));
   line-height: 1;
   margin-bottom: 0.6rem;
 }
@@ -148,7 +148,7 @@ header {
   justify-content: space-between;
   padding: 0.9rem 1.4rem;
   border-bottom: 1px solid var(--border);
-  background: rgba(0,200,83,0.04);
+  background: rgba(255,179,0,0.04);
 }
 
 .panel-title {
@@ -189,7 +189,7 @@ header {
 .positions-table td {
   padding: 0.65rem 1rem;
   text-align: right;
-  border-bottom: 1px solid rgba(20,51,20,0.4);
+  border-bottom: 1px solid rgba(42,34,0,0.4);
   white-space: nowrap;
 }
 
@@ -197,7 +197,7 @@ header {
 
 .positions-table tr:last-child td { border-bottom: none; }
 
-.positions-table tr:hover td { background: rgba(0,200,83,0.04); }
+.positions-table tr:hover td { background: rgba(255,179,0,0.03); }
 
 .positions-table .symbol {
   font-weight: 700;
@@ -275,14 +275,14 @@ header {
 }
 
 .btn-run {
-  background: rgba(0,200,83,0.12);
-  border-color: rgba(0,200,83,0.4);
-  color: var(--gold);
+  background: rgba(0,180,90,0.12);
+  border-color: rgba(0,180,90,0.4);
+  color: var(--green);
 }
 .btn-run:hover:not(:disabled) {
-  background: rgba(0,200,83,0.22);
-  border-color: var(--gold);
-  box-shadow: 0 0 16px rgba(0,200,83,0.3);
+  background: rgba(0,180,90,0.22);
+  border-color: var(--green);
+  box-shadow: 0 0 12px rgba(0,212,106,0.2);
 }
 
 .btn-dry {
@@ -297,12 +297,12 @@ header {
 }
 
 .btn-refresh {
-  background: rgba(0,200,83,0.08);
-  border-color: rgba(0,200,83,0.3);
+  background: rgba(255,179,0,0.08);
+  border-color: rgba(255,179,0,0.3);
   color: var(--gold);
 }
 .btn-refresh:hover:not(:disabled) {
-  background: rgba(0,200,83,0.15);
+  background: rgba(255,179,0,0.15);
   border-color: var(--gold);
   box-shadow: 0 0 12px var(--gold-glow);
 }
@@ -341,7 +341,7 @@ header {
 }
 
 .log-panel {
-  background: #020802;
+  background: #050505;
   border: 1px solid var(--border);
   border-radius: 14px;
   overflow: hidden;
