@@ -92,12 +92,12 @@ function initChart() {
     type: 'line',
     data: { labels: [], datasets: [{
       data: [],
-      borderColor: '#FFB300',
-      backgroundColor: 'rgba(255,179,0,0.07)',
+      borderColor: '#00C853',
+      backgroundColor: 'rgba(0,200,83,0.07)',
       fill: true,
       tension: 0.4,
       pointRadius: 2,
-      pointBackgroundColor: '#FFB300',
+      pointBackgroundColor: '#00C853',
       borderWidth: 2,
     }]},
     options: {
@@ -107,10 +107,10 @@ function initChart() {
       plugins: {
         legend: { display: false },
         tooltip: {
-          backgroundColor: '#1a1400',
-          borderColor: '#2a2200',
+          backgroundColor: '#001a09',
+          borderColor: '#143314',
           borderWidth: 1,
-          titleColor: '#FFB300',
+          titleColor: '#00C853',
           bodyColor: '#e0e0e0',
           callbacks: {
             label: ctx => ' $' + Number(ctx.raw).toLocaleString('en-US', {minimumFractionDigits: 2})
@@ -119,11 +119,11 @@ function initChart() {
       },
       scales: {
         x: {
-          grid: { color: 'rgba(255,179,0,0.05)' },
+          grid: { color: 'rgba(0,200,83,0.05)' },
           ticks: { color: '#444', font: { family: 'Space Mono', size: 10 }, maxTicksLimit: 8 }
         },
         y: {
-          grid: { color: 'rgba(255,179,0,0.05)' },
+          grid: { color: 'rgba(0,200,83,0.05)' },
           ticks: {
             color: '#444',
             font: { family: 'Space Mono', size: 10 },
