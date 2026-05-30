@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+web/history.json
+web/portfolio_history.json
+*.egg-info/
+.venv/
+venv/

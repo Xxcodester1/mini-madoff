@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Madoff — AI Trading Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────── -->
+  <header>
+    <div class="logo">MINI MADOFF</div>
+    <div class="tagline">AI &bull; Powered &bull; Paper &bull; Trading</div>
+    <div class="mode-badge">PAPER TRADING MODE</div>
+    <div class="last-updated" id="last-updated">Connecting...</div>
+  </header>
+
+  <!-- ── Stats ──────────────────────────────────────── -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-label">Portfolio Value</div>
+      <div class="stat-value" id="stat-portfolio">—</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Cash</div>
+      <div class="stat-value" id="stat-cash">—</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Invested</div>
+      <div class="stat-value" id="stat-invested">—</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Unrealized P&amp;L</div>
+      <div class="stat-value" id="stat-pl">—</div>
+    </div>
+  </div>
+
+  <!-- ── Main Grid ───────────────────────────────────── -->
+  <div class="main-grid">
+
+    <!-- Positions Table -->
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">Positions</span>
+        <span class="panel-badge" id="positions-badge">—</span>
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="positions-table">
+          <thead>
+            <tr>
+              <th>Symbol</th>
+              <th>Qty</th>
+              <th>Entry</th>
+              <th>Current</th>
+              <th>Value</th>
+              <th>P&amp;L $</th>
+              <th>P&amp;L %</th>
+            </tr>
+          </thead>
+          <tbody id="positions-tbody">
+            <tr><td colspan="7" class="no-positions">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="panel chart-panel">
+      <div class="panel-header">
+        <span class="panel-title">Portfolio Value</span>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="portfolioChart"></canvas>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── Controls ────────────────────────────────────── -->
+  <div class="controls">
+    <input
+      class="password-input"
+      type="password"
+      id="password"
+      placeholder="Dashboard password"
+      autocomplete="off"
+    >
+    <button class="btn btn-run" id="btn-run" onclick="runBot(false)">
+      &#9654; &nbsp;Run Bot
+    </button>
+    <button class="btn btn-dry" id="btn-dry" onclick="runBot(true)">
+      &#9632; &nbsp;Dry Run
+    </button>
+    <button class="btn btn-refresh" onclick="refreshPortfolio()">
+      &#8635; &nbsp;Refresh
+    </button>
+    <div class="bot-status">
+      <div class="dot" id="status-dot"></div>
+      <span id="status-label">Idle</span>
+    </div>
+  </div>
+
+  <!-- ── Bot Activity Log ─────────────────────────────── -->
+  <div class="log-section">
+    <div class="log-panel">
+      <div class="panel-header">
+        <span class="panel-title">Bot Activity Log</span>
+        <span class="panel-badge">Live</span>
+      </div>
+      <div class="log-body" id="log-body">
+        <div class="log-empty">No activity yet — run the bot to see live output here.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
